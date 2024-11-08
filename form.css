@@ -1,0 +1,60 @@
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: block;
+    margin-bottom: 0.6rem;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+form {
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type="submit"] {
+    background-color: #4caf50; /* var(--primary-color) */
+    background-color: var(--primary-color) ;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    /* background-color: #45a049;
+    background-color: var(--secondory-color) ; */
+
+}
+
+.form-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.form-group .row {
+    flex: 1;
+}
+
+.form-group .row label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input[type="text"],
+input[type="month"] {
+    width: 100%;
+}
+
+input#cvvNumber {
+    max-width: 80px; /* Adjust width to better fit CVV */
+}
