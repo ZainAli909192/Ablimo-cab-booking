@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABLimo</title> 
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+
+    <!-- <link rel="stylesheet" href="mediaquiries.css"> -->
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="form.css">
+
+</head>
+<body>
+    <div class="popup-screen ">
+        <div class="popup-box special">
+            <!-- <i class="fas fa-times close-btn"></i> -->
+        <img src="./img/tick.png" height="45px" alt="">
+        
+        <p class="mesg"> 
+        Your booking is confirmed...!  
+        </p>
+        <button class=" butt close-btn">Ok</button>
+        <!-- <a href="#" class="btn close-btn">Ok</a> -->
+    </div>
+</div>
+    <header> 
+        
+    <nav class="navbar">
+        <div class="navbar-logo">
+      <img src="./img/logo.jpg" alt="" height="65px" width="65px">  </div>
+        <ul class="navbar-links">
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="services-menu">
+                <a href="#services">Services</a>
+            </li>
+            <li><a href="#contact" onclick="spot()">Contact us</a></li>
+        </ul>
+        <button class="navbar-button" onclick="spot()">Advance booking</button>
+        <div class="navbar-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <div class="banner-container">
+        <h1>Welcome  towards
+            <span class="typin"> Journey to Excellence</span> 
+        </h1>
+        <p>Experience unparalleled luxury and convenience with ABLimo, your premier choice for cab advance booking. Our top-notch fleet and highly trained drivers ensure a seamless and sophisticated travel experience.
+            <br/>
+            <br/>
+            Book your ride in advance and enjoy.
+        </p>
+
+            <button onclick="spot()">Advance booking</button>
+    </div>
+
+</header>
+
+
+
+
+<script src="script.js"></script>
+<script>
+    spot()
+</script>
+</body>
+</html>
