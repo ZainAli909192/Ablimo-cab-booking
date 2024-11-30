@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    
+    scroll-behavior: smooth;
+}
+:root {
+    --primary-color: #40bb24;
+    /* --primary-color: blue; */
+    --primary-color: #55AD9B;
+    --secondory-color: #95D2B3;
+}
+header{
+    background: url('./img/banner3.png') no-repeat center center/cover;
+    background-size: cover; /* Ensure the image covers the whole container */
+    background-position: top; /* Adjust the image to align with the top of the container */
+    /* animation: chabgebanner 8s infinite ease-in-out; */
+}
+body {
+    
+    font-family: Arial, sans-serif;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 2rem;
+    /* background-color: #1C9C4D; */
+    color: #0b0b0b;
+    position: relative;
+    z-index: 10;
+}
+
+.navbar-logo {
+    /* font-size: 1.5rem; */
+    font-weight: bold;
+    color: var(--primary-color);
+    display: inline-block;
+}
+.navbar-logo img{
+    
+    border-radius: 50%;
+}
+
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-links li {
+    margin-left: 2rem;
+}
+
+.navbar-links a{
+    color: #f0eded;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: var(--primary-color);
+}
+
+.navbar-button, .banner button {
+    background: linear-gradient(115deg, var(--primary-color), var(--secondory-color));
+    color: #302e2e;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 1.3px;
+    transition: background-color 0.3s;
+animation: colorChange 2s infinite ease-in-out;
+}
+@keyframes colorChange {
+    from{
+        color: #093424; 
+        /* transform:scale(1.2); */
+    }
+    to{
+        color: rgb(22, 21, 21);
+        /* transform:scale(1); */
+    }
+}
+
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 11;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #141313;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        margin-top: 16%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 60%; /* Width of the sliding menu */
+        height: 50%;  
+        background-color: #f0eaea; 
+        flex-direction: column; 
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 25px; /* Adjust if necessary */
+        transform: translateX(-100%);
+        display: flex;
+        z-index: 9;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+    .navbar-links.active {
+        transform: translateX(0%); 
+        height: 80vh; 
+        /* background-color: rgb(185, 95, 95); */
+        
+    }
+    
+    .navbar-links li {
+        margin-left: 0;
+        margin-top: 15%;
+        width: 70%;
+        /* z-index: 1000; */
+    }
+    
+    .navbar-links a {
+        padding: 1rem;
+        width: 100%;
+        color: black;
+    }
+    
+    .navbar-button {
+        margin: 1rem;
+    }
+    
+    .navbar-toggle {
+        display: flex;
+    }
+    .about {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
+    .about1 p{
+        font-size: 0.9rem;    
+    }
+    .about ul li{
+        background-color: red;
+        
+    }
+    .content .m{
+        font-size: 1.2rem;  
+
+    }
+}
+
+.navbar-links a.active {
+    /* color: blue; */
+    color: white;
+    padding: 5px 10px;
+
+    background-color: #95D2B3;
+    background-color: var(--primary-color);
+}
+
+.banner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+       /* background: url('./img/b.jpg') no-repeat center/cover; */
+    padding: 10%;
+    /* animation: chabgebanner 3s infinite ease-in-out; */
+} 
+@keyframes chabgebanner {
+    
+    60%{
+        
+        background: url('./img/banner2.png') no-repeat center center/cover;
+    }
+}
+.banner-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-container h1,
+.banner-container p,
+.banner-container button {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-container h1 {
+    margin-top: -10%;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.banner-container p {
+    margin-top: 1rem;
+    font-size: 1.2rem; 
+    border-radius: 6px;
+    color: #f2f0f0;
+    width: 90%;
+    text-align: justify;
+}
+
+.banner-container button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    background: linear-gradient(115deg, var(--primary-color), var(--secondory-color));
+}
+
+
+.typin {
+    border-right: 1px solid #fff;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    color:linear-gradient(to left, #D8EFD3, #55AD9B);
+    animation: blink-caret 0.75s step-end infinite;
+    background-image: linear-gradient(to left, #D8EFD3, #55AD9B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #fff;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .banner-container {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .banner-container p{
+        font-size: 16px;
+    }
+    .banner-container h1 {
+        margin-top: -50%; 
+        font-size: 20px;
+    }
+    .banner-container .typing
+    {
+         font-size: 20px;
+
+    }
+}
+footer{
+    padding: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    /* position: absolute;
+    bottom: 0; */
+    color: white;
+    background-color: var(--primary-color);
+}
+footer a{
+    color: white;
+    margin: 0 10px;
+}
+
+
+
+@keyframes change-color {
+    30%{
+      
+  color: var(--primary-color);
+  
+  background:linear-gradient(to left, #b9dab2, #55AD9B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  }
+  70%{
+  
+    color: var(--primary-color);
+    background:linear-gradient(to right, #E90074, #fe9dc5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    background-clip: text;
+  
+  }
+
+}
+
+.whatsapp-icon {
+    border-radius: 50%; /* Round the icon */
+    padding: 5px; /* Add some padding */
+    width: 40px; /* Icon width */
+    height: 40px; /* Icon height */
+  }
+  
+  .whatsapp-icon img {
+    width: 15%; /* Make image responsive */
+    height:15%; /* Make image responsive */
+    object-fit: cover; /* Maintain image aspect ratio */
+  }
+  .icons{
+position: fixed;
+bottom: 10%;
+right: 10px;
+margin-right: -13rem;
+}
